@@ -1,0 +1,29 @@
+{
+  "name": "@numbers-framework/frontend-react",
+  "version": "1.0.0",
+  "description": "React Frontend for Numbers Framework",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volodymyr-volynets/numbers-framework-frontend-react.git"
+  },
+  "keywords": [
+    "AuthTkt"
+  ],
+  "author": "Volodymyr Volynets",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/volodymyr-volynets/numbers-framework-frontend-react/issues"
+  },
+  "homepage": "https://github.com/volodymyr-volynets/numbers-framework-frontend-react#readme",
+  "dependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.7.3"
+  }
+}
