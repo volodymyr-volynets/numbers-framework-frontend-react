@@ -1,5 +1,4 @@
-import React from 'react';
-import styles from './Base.css';
+//import styles from './Base.css';
 
 /**
  * Numbers select object
