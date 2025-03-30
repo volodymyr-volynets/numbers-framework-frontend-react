@@ -1221,8 +1221,8 @@ HTML.Component = (options) => {
 const Icon = (options) => {
     options['class'] = options['class'] ?? '';
     options['tag'] = options['tag'] ?? 'i';
-    if (options['type'].search(/material-symbols-outlined/)) {
-        let value = options['type'].replace(/(material-symbols-outlined)|(light)|(regular)|(bold)|(fill)|(animated)|(dark)|inactive/, '').trim();
+    if (options['type'].indexOf('material-symbols-outlined') != -1) {
+        let value = options['type'].replace(/(material-symbols-outlined)|(light)|(regular)|(bold)|(fill)|(animated)|(dark)|(inactive)/, '').trim();
         options['value'] = value;
         options['class']+= options['type'].replace(value, '');
     } else {
