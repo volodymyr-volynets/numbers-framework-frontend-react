@@ -1,5 +1,5 @@
 import React from "react";
-import { HTML } from './HTML.mjs';
+import { HTML } from './HTML.js';
 import {render, screen} from '@testing-library/react'
 import '@testing-library/jest-dom'
 
