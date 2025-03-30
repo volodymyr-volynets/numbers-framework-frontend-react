@@ -1224,9 +1224,9 @@ const Icon = (options) => {
     if (options['type'].indexOf('material-symbols-outlined') != -1) {
         let value = options['type'].replaceAll(/(material-symbols-outlined)|(light)|(regular)|(bold)|(fill)|(animated)|(dark)|(inactive)/gi, '').trim();
         options['value'] = value;
-        options['class']+= options['type'].replace(value, '');
+        options['class']+= ' ' + options['type'].replace(value, '');
     } else {
-        options['class']+= options['type'];
+        options['class']+= ' ' +options['type'];
     }
     delete options['type'];
     return HTML.Tag(options);
