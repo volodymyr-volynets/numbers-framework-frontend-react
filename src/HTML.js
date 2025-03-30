@@ -1130,6 +1130,7 @@ const Separator = (props) => {
     result+= '<table width="100%">';
         result+= '<tr><td width="50%"><hr/></td>';
             if (value || icon) {
+                // todo add Name method
                 result+= '<td width="1%" nowrap><b>' + HTML.Name(value, icon) + '</b></td>';
             }
         result+= '<td width="50%"><hr/></td></tr>';
@@ -1216,6 +1217,20 @@ HTML.Component = (options) => {
 	delete options['component'];
 	return <TagComponent {...options} />;
 };
+
+const Icon = (options) => {
+    options['class'] = options['class'] ?? '';
+    if (options['type'].search(/material-symbols-outlined/)) {
+        let value = options['type'].replace(/(material-symbols-outlined)|(light)|(regular)|(bold)|(fill)|(animated)|(dark)|inactive/, '').trim();
+        options['value'] = value;
+        options['class']+= options['type'].replace(value, '');
+    } else {
+        options['class']+= options['type'];
+    }
+    delete options['type'];
+    return HTML.Tag(options);
+}
+HTML.Icon = Icon;
 
 export default HTML;
 export {
