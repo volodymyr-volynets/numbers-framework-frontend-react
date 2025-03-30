@@ -1,5 +1,5 @@
 import React, { createElement, Fragment, useEffect } from 'react';
-import { NumbersSelect } from import './NumbersSelect/Base.js';
+import { NumbersSelect } from './NumbersSelect/Base.js';
 import './NumbersSelect/Base.css';
 import { renderToStaticMarkup } from 'react-dom/server';
 
@@ -1185,7 +1185,11 @@ const Tag = (props) => {
     if (options['self_closing']) {
         delete options['self_closing'];
     } else {
-        if (options['value'] && !options.children) {
+		if (options['have_html']) {
+			delete options['have_html'];
+			options['dangerouslySetInnerHTML'] = {};
+			options['dangerouslySetInnerHTML']['__html'] = options['value'];
+		} else if (options['value'] && !options.children) {
             if (!options.children) {
                 options.children = [];
             }
@@ -1208,15 +1212,9 @@ const Tag = (props) => {
 HTML.Tag = Tag;
 
 HTML.Component = (options) => {
-    switch (options.component) {
-        case 'HTML.Input':
-            return HTML.Input(options);
-        case 'HTML.Button':
-            return HTML.Button(options);
-        case 'HTML.Button2':
-            return HTML.Button2(options);
-    }
-    throw new Error('Unknown component type!');
+	const TagComponent = options['component'];
+	delete options['component'];
+	return <TagComponent {...options} />;
 };
 
 export default HTML;
