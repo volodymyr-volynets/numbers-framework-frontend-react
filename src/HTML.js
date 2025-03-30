@@ -1,6 +1,5 @@
 import React, { createElement, Fragment, useEffect } from 'react';
 import { NumbersSelect } from './NumbersSelect/Base.js';
-import './NumbersSelect/Base.css';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 const HTML = (props) => <>{props.children}</>;
@@ -847,7 +846,6 @@ const HTMLSelect = (props) => {
     // mounting
     useEffect(() => {
         if (settings.numbers) {
-            //const { NumbersSelect } = require('./Components/Select/Numbers/Base.js');
             NumbersSelect(settings);
         }
     }, []);
