@@ -1,6 +1,6 @@
 {
   "name": "@numbers-framework/frontend-react",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React Frontend for Numbers Framework",
   "main": "dist/index.js",
   "scripts": {

@@ -1220,6 +1220,7 @@ HTML.Component = (options) => {
 
 const Icon = (options) => {
     options['class'] = options['class'] ?? '';
+    options['tag'] = options['tag'] ?? 'i';
     if (options['type'].search(/material-symbols-outlined/)) {
         let value = options['type'].replace(/(material-symbols-outlined)|(light)|(regular)|(bold)|(fill)|(animated)|(dark)|inactive/, '').trim();
         options['value'] = value;
