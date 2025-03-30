@@ -1,10 +1,10 @@
 {
   "name": "@numbers-framework/frontend-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Frontend for Numbers Framework",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "babel src --out-dir dist",
     "test": "react-scripts test --passWithNoTests"
   },
   "repository": {
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/volodymyr-volynets/numbers-framework-frontend-react#readme",
   "dependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
     "@testing-library/jest-dom": "^6.6.3",
     "react": "^19.0.0",
     "react-dom": "^19.1.0"
