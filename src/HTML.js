@@ -1193,8 +1193,8 @@ const Tag = (props) => {
                 options.children = [];
             }
             options.children.push(<Fragment>{options['value']}</Fragment>);
-            delete options['value'];
         }
+        delete options['value'];
     }
     delete options['return_html'];
     let result = createElement(
