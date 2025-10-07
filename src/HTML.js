@@ -851,6 +851,9 @@ const HTMLSelect = (props) => {
     }, []);
     if (settings.options) {
         children = [];
+        if (!settings.no_choose) {
+            children.push(HTML.Option({name: '', key: 0, value: ''}));
+        }
         let options = settings.options;
         for (let k in settings.options) {
             options[k]['value'] = k;
