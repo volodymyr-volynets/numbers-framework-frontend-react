@@ -398,6 +398,7 @@ const HTMLSelect = props => {
       // todo: add loc
       children.push(HTML.Option(options[k]));
     }
+    delete settings.options;
   }
   return /*#__PURE__*/(0, _react.createElement)('select', settings, children);
 };
